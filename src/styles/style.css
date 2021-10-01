@@ -1,0 +1,146 @@
+hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/jumbotron.webp");
+  background-size: cover;
+}
+
+detail-item::before,
+hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+search-bar > .form-control {
+  transition: border 0.5s;
+}
+search-bar > .form-control:focus {
+  border: 1px solid #ca3e47 !important;
+  box-shadow: none;
+}
+search-bar > .form-control::placeholder {
+  color: white;
+}
+
+#main-search,
+#navbar-search,
+.navbar {
+  transition: 0.5s ease-in;
+}
+
+main {
+  background-color: #dddddd;
+}
+
+main h2 {
+  padding: 0;
+  margin: 0;
+}
+
+result-film {
+  display: block;
+}
+
+film-item:hover {
+  cursor: pointer;
+}
+
+film-item.col-1 {
+  width: 167px;
+  height: 250px;
+  padding: 0 !important;
+}
+film-item img {
+  width: 167px;
+  height: 250px;
+}
+
+film-item.col-1,
+film-item img,
+detail-item img {
+  border-radius: 8px;
+}
+
+film-list.row {
+  flex-wrap: nowrap !important;
+}
+
+film-item.col-1 {
+  transition: transform 0.5s;
+}
+
+film-item.col-1:hover {
+  transform: scale(1.1, 1.1);
+}
+
+detail-item img {
+  width: 267px;
+  height: 400px;
+}
+
+detail-item.row {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s;
+}
+
+detail-item.row.details-show {
+  min-height: 600px;
+  max-height: 850px;
+  transition: max-height 1.5s;
+}
+
+.btn-close {
+  width: 2.5em !important;
+  height: 2.5em !important;
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  border-radius: 10px;
+}
+
+film-list::-webkit-scrollbar {
+  height: 10px;
+}
+
+film-list::-webkit-scrollbar-track {
+  background: #ddd;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+film-list::-webkit-scrollbar-thumb {
+  background: #dc3545;
+}
+
+@media (max-width: 991.98px) {
+  detail-item.row.details-show {
+    padding: 20px 0;
+    min-height: 700px;
+    max-height: 900px;
+    transition: max-height 1.5s;
+  }
+  .details-film {
+    padding: 20px 10px;
+  }
+  .details {
+    margin-top: 20px !important;
+  }
+  search-bar {
+    margin-top: 20px;
+  }
+}
